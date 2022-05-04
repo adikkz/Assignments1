@@ -1,4 +1,4 @@
-package homeworks;/*package HomeWorks;
+package homeworks;
 
 public class Hw24_2<E> extends MyAbstractList<E> {
     private int size = 0;
@@ -35,33 +35,33 @@ public class Hw24_2<E> extends MyAbstractList<E> {
 
 
     public void addFirst(E e) {
-        Node<E> newNode = new Node<>(e); // Create a new node
-        newNode.next = head; // link the new node with the head
-        head = newNode; // head points to the new node
-        size++; // Increate list size
+        Node<E> newNode = new Node<>(e); 
+        newNode.next = head; 
+        head = newNode; 
+        size++; 
 
-        if (tail == null) // The new node is the only node in list
+        if (tail == null) 
             tail = head;
     }
 
 
     public void addLast(E e) {
-        Node<E> newNode = new Node<>(e); // Create a new node for e
+        Node<E> newNode = new Node<>(e); 
         if (tail == null) {
-            head = tail = newNode; // The on;y node in list
+            head = tail = newNode; 
         }
         else {
-            tail.next = newNode; // Link the new node with the last node
-            tail = tail.next; // tail now points to the last node
+            tail.next = newNode; 
+            tail = tail.next; 
         }
 
-        size++; // Increase size
+        size++;
     }
 
 
     public void add(int index, E e) {
-        if (index == 0) addFirst(e); // Insert first
-        else if (index >= size) addLast(e); // Insert last
+        if (index == 0) addFirst(e); // 
+        else if (index >= size) addLast(e); 
         else { // Insert in the middle
             Node<E> current = head;
             for (int i = 1; i < index; i++)
@@ -75,21 +75,21 @@ public class Hw24_2<E> extends MyAbstractList<E> {
 
 
     public E removeFirst() {
-        if (size == 0) return null; // Nothing to delete
+        if (size == 0) return null;
         else {
-            Node<E> temp = head; // keep the first node temporarily
-            head = head.next; // Move head to point to next node
-            size--; // Reduce size by 1
-            return temp.element; // Return the deleted element
+            Node<E> temp = head; 
+            head = head.next;  
+            size--; 
+            return temp.element; 
         }
     }
 
 
     public E removeLast() {
-        if (size == 0) return null; // Nothing to remove
-        else if (size == 1) { // Only one element in the list
+        if (size == 0) return null; 
+        else if (size == 1) {
             Node<E> temp = head;
-            head = tail = null; // list becomes empty
+            head = tail = null;
             size = 0;
             return temp.element;
         }
@@ -109,9 +109,9 @@ public class Hw24_2<E> extends MyAbstractList<E> {
 
 
     public E remove(int index) {
-        if (index < 0 || index >= size) return null; // Out of range
-        else if (index == 0) return removeFirst(); // Remove first
-        else if (index == size - 1) return removeLast(); // Remove last
+        if (index < 0 || index >= size) return null;
+        else if (index == 0) return removeFirst(); 
+        else if (index == size - 1) return removeLast();
         else {
             Node<E> previous = head;
 
@@ -135,10 +135,10 @@ public class Hw24_2<E> extends MyAbstractList<E> {
             result.append(current.element);
             current = current.next;
             if (current != null) {
-                result.append(", "); // Separate two elements with a comma
+                result.append(", ");
             }
             else {
-                result.append("]"); // Insert the closing ] in the string
+                result.append("]");
             }
         }
 
@@ -168,7 +168,7 @@ public class Hw24_2<E> extends MyAbstractList<E> {
 
 
     public E get(int index) {
-        if (index < 0 || index >= size) return null; // Out of range
+        if (index < 0 || index >= size) return null; 
         else if (index == 0) return getFirst();
         else if (index == size - 1) return getLast();
         else {
@@ -231,7 +231,7 @@ public class Hw24_2<E> extends MyAbstractList<E> {
 
     public class LinkedListIterator
             implements java.util.Iterator<E> {
-        private Node<E> current = head; // Current index
+        private Node<E> current = head;
 
         @Override
         public boolean hasNext() {
@@ -261,4 +261,3 @@ public class Hw24_2<E> extends MyAbstractList<E> {
         }
     }
 }
-*/
